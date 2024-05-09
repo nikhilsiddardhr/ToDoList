@@ -13,8 +13,17 @@ function clicked(){
     dat.innerText=date.value;
     btn.innerText="del";
     document.body.appendChild(newLine);
+    txt.style.display="inline";
+    dat.style.display="inline";
+    txt.style.marginRight="60px";
+    dat.style.marginRight="60px";
+    newLine.style.marginTop="15px";
     newLine.appendChild(txt);
     newLine.appendChild(dat);
     newLine.appendChild(btn);
-    
+    btn.addEventListener("click",()=>{
+        newLine.remove();
+    })
+    text.value="";
+    date.value="";
 }
